@@ -2,9 +2,10 @@ import React from "react";
 
 export default function Image(props)
 {
+    console.log(props.url);
     return (
-        <><div>
-            <img src='`${props.url}`'></img>
+        <><div className='image'>
+            <img src={props.image}></img>
         </div></>
     );
 }

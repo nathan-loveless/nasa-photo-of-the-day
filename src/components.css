@@ -1,0 +1,23 @@
+.container
+{
+    background: lightgrey;
+    width: 512px;
+}
+
+.title
+{
+    background: skyblue;
+    width: 100%;
+}
+
+.description
+{
+    background: lightgoldenrodyellow;
+    width: 100%;
+    padding: 10px;
+}
+
+.image
+{
+    width: 100%;
+}

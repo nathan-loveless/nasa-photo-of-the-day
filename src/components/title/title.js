@@ -1,9 +1,10 @@
 import React from "react";
+import "../../components.css";
 
 export default function Image(props)
 {
     return (
-        <><div>
+        <><div className='title'>
             <h2>Title: {props.title}</h2>
         </div></>
     );

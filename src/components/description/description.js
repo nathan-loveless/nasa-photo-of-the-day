@@ -1,9 +1,10 @@
 import React from "react";
+import "../../components.css";
 
 export default function Description(props)
 {
     return (
-        <><div>
+        <><div className='description'>
             <p>{props.desc}</p>
         </div></>
     );
