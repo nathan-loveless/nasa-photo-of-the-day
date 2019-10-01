@@ -1,11 +1,20 @@
 import React from "react";
-import "../../components.css";
+import styled from 'styled-components';
+
+const MyDesc = styled.div.attrs({
+    className: 'description'
+  })`
+  box-sizing: border-box;
+  background: lightgoldenrodyellow;
+  width: 100%;
+  padding: 10px;
+  `;
 
 export default function Description(props)
 {
     return (
-        <><div className='description'>
+        <><MyDesc className='description'>
             <p>{props.desc}</p>
-        </div></>
+        </MyDesc></>
     );
 }

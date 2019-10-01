@@ -1,7 +1,8 @@
-.container
+/*.container
 {
+    width: 50vw;
     background: lightgrey;
-    width: 512px;
+    margin-left: 10px;
 }
 
 .title
@@ -12,6 +13,7 @@
 
 .description
 {
+    box-sizing: border-box;
     background: lightgoldenrodyellow;
     width: 100%;
     padding: 10px;
@@ -19,5 +21,12 @@
 
 .image
 {
-    width: 100%;
+    max-width: 100%;
 }
+
+img
+{
+    width: 100%;
+    object-fit: contain;
+}
+*/

@@ -1,11 +1,17 @@
 import React, {useState, useEffect} from "react";
+import styled from 'styled-components';
 import Title from "../title/title.js";
 import Image from "../image/image.js";
 import Description from "../description/description.js";
 import Axios from "axios";
-import "../../components.css";
 
-
+const MyContainer = styled.div.attrs({
+  className: 'container'
+})`
+  width: 50vw;
+  background: lightgrey;
+  margin-left: 10px;
+`;
 
 export default function Container()
 {
@@ -15,7 +21,7 @@ export default function Container()
         async function fetchData() {
         try {
           const returnData = await Axios.get(
-            "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
+            "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2019-09-30"
           );
           setapod(returnData.data);
           console.log(returnData);
@@ -30,10 +36,10 @@ export default function Container()
 
     // This is the rendering main container, it will do the rest of the compoments and get the APOD
     return (
-        <><div className='container'>
+        <><MyContainer className='container'>
             <Title title={apod.title}/>
             <Image image={apod.url}/>
             <Description desc={apod.explanation}/>
-        </div></>
+        </MyContainer></>
     );
 }

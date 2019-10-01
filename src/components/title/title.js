@@ -1,11 +1,18 @@
 import React from "react";
-import "../../components.css";
+import styled from 'styled-components';
 
-export default function Image(props)
+const MyTitle = styled.div.attrs({
+    className: 'title'
+  })`
+    background: skyblue;
+    width: 100%;
+  `;
+
+export default function Title(props)
 {
     return (
-        <><div className='title'>
+        <><MyTitle className='title'>
             <h2>Title: {props.title}</h2>
-        </div></>
+        </MyTitle></>
     );
 }
